@@ -1,9 +1,11 @@
 # Food Delivery System
 
-A comprehensive platform designed to facilitate seamless food ordering and delivery services, connecting consumers, vendors, and delivery personnel.
+A platform for users to order food, restaurants to manage orders, and delivery personnel to handle deliveries efficiently.
+
+---
 
 ## Table of Contents
-
+- [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -12,23 +14,31 @@ A comprehensive platform designed to facilitate seamless food ordering and deliv
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
+---
+
+## Overview
+
+The **Food Delivery System** is designed to streamline the process of ordering, managing, and delivering food. It supports multiple roles:
+- **Users**: Browse restaurants, place orders, and track delivery status.
+- **Restaurants**: Manage menus and process orders.
+- **Delivery Personnel**: Accept and deliver orders.
+
+---
+
 ## Features
 
-- **User Roles**:
-  - **Consumer**: Browse menus, place orders, track deliveries.
-  - **Vendor**: Manage menu items, process orders, update availability.
-  - **Delivery Person**: Accept delivery assignments, update delivery status.
+- **User Account Management**: Sign up, log in, and manage profiles.
+- **Restaurant Management**: Add/edit menus, process orders, and manage availability.
+- **Order Management**: Real-time order tracking for users and delivery personnel.
+- **Payment Integration**: Secure payment handling.
+- **Feedback System**: Ratings and reviews for restaurants.
 
-- **Core Functionalities**:
-  - User authentication and profile management.
-  - Real-time order tracking.
-  - Payment processing integration.
-  - Rating and review system for consumers and vendors.
+---
 
 ## Installation
 
-To set up the project locally, follow these steps:
+Follow these steps to set up the project locally:
 
-1. **Clone the repository**:
+1. **Clone the Repository**:
    ```bash
    git clone https://github.com/aishwxryag/Food-Delivery-System.git
