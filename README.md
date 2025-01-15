@@ -1,6 +1,6 @@
 # Food Delivery System
 
-A platform for users to order food, restaurants to manage orders, and delivery personnel to handle deliveries efficiently.
+A platform for users to order food and restaurants to manage orders.
 
 ---
 
@@ -18,20 +18,16 @@ A platform for users to order food, restaurants to manage orders, and delivery p
 
 ## Overview
 
-The **Food Delivery System** is designed to streamline the process of ordering, managing, and delivering food. It supports multiple roles:
+The **Food Delivery System** is designed to streamline the process of ordering food by users and managing food by restaurants. It supports multiple roles:
 - **Users**: Browse restaurants, place orders, and track delivery status.
 - **Restaurants**: Manage menus and process orders.
-- **Delivery Personnel**: Accept and deliver orders.
 
 ---
 
 ## Features
 
-- **User Account Management**: Sign up, log in, and manage profiles.
 - **Restaurant Management**: Add/edit menus, process orders, and manage availability.
 - **Order Management**: Real-time order tracking for users and delivery personnel.
-- **Payment Integration**: Secure payment handling.
-- **Feedback System**: Ratings and reviews for restaurants.
 
 ---
 
@@ -39,68 +35,89 @@ The **Food Delivery System** is designed to streamline the process of ordering, 
 
 Follow these steps to set up the project locally:
 
-### Backend Setup
+### Set Up MySQL Databases
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/aishwxryag/Food-Delivery-System.git
-   ```
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd Food-Delivery-System
-   ```
-3. **Set Up the Database**:
-   - Install MySQL on your system.
-   - Create a database for the application in MySQL.
-   - Update the database credentials in the `src/main/resources/application.properties` file.
-4. **Build and Run the Backend**:
-   - Use the following command to start the backend:
-     ```bash
-     ./mvnw spring-boot:run
-     ```
+1. Open phpMyAdmin or any MySQL client.
+2. Create two databases:
+   - `foodServiceDb` for the Food Menu Service.
+   - `orderServiceDb` for the Orders Service.
 
-### Frontend Setup
+### Start the Eureka Server
 
-1. **Navigate to the Frontend Directory**:
-   ```bash
-   cd frontend
+1. Navigate to the Eureka Server project in your IDE.
+2. Run the application (`EurekaApplication.java`).
+3. Verify that the Eureka Dashboard is available at:
    ```
-2. **Install Dependencies**:
-   - Install all required dependencies for the frontend by running:
-     ```bash
-     npm install
-     ```
-3. **Start the Frontend Server**:
-   - Launch the development server with:
-     ```bash
-     npm start
-     ```
+   http://localhost:8761
+   ```
+
+### Start Microservices
+
+#### Food Menu Service
+1. Navigate to the Food Menu Service project in your IDE.
+2. Run the application (`FoodServiceApplication.java`).
+3. Verify that the service is registered in Eureka (accessible via the Eureka Dashboard).
+
+#### Orders Service
+1. Navigate to the Orders Service project in your IDE.
+2. Run the application (`OrderServiceApplication.java`).
+3. Verify that the service is also registered in Eureka.
 
 ---
 
 ## Usage
 
-1. **Access the Application**:
-   - Open your browser and navigate to `http://localhost:3000`.
+### Test the System
 
-2. **User Workflow**:
-   - **Sign Up or Log In**: Register a new account or log in with existing credentials.
-   - **Browse and Order**: Explore available restaurants, add items to the cart, and place orders.
-   - **Track Orders**: Monitor the status of your placed orders in real time.
+Use Postman or a similar tool to test the functionality of the system.
 
-3. **Restaurant Workflow**:
-   - **Manage Menu**: Add, edit, or remove menu items.
-   - **Handle Orders**: View and update the status of incoming orders.
+#### Food Menu Service Endpoints
+- **Get all food items**:
+  ```
+  GET http://localhost:8081/fooditems/getAll
+  ```
+- **Add a food item**:
+  ```
+  POST http://localhost:8081/fooditems/add
+  ```
+- **Get a specific food item**:
+  ```
+  GET http://localhost:8081/fooditems/{id}
+  ```
+  Replace `{id}` with the actual food item ID.
+- **Check availability of a food item**:
+  ```
+  GET http://localhost:8081/fooditems/{id}/check-availability?quantity=5
+  ```
+  Replace `{id}` with the actual food item ID.
 
-4. **Delivery Workflow**:
-   - **Accept Deliveries**: View pending deliveries and assign yourself to them.
-   - **Update Status**: Mark orders as delivered once completed.
+#### Orders Service Endpoints
+- **Get all orders**:
+  ```
+  GET http://localhost:8082/orders/getAll
+  ```
+- **Place an order**:
+  ```
+  POST http://localhost:8082/orders/place
+  ```
+
+### Verify Microservice Communication
+
+1. Place an order via the Orders Service.
+2. Check that the Orders Service communicates with the Food Menu Service to validate food item availability.
+3. Confirm the results:
+   - Food item quantity decreases if the order is successfully placed.
+   - The order is saved in the Orders Service database.
+
+### Stop Services
+
+1. Stop the applications in your IDE once you are done testing.
+2. Shut down the Eureka Server.
 
 ---
 
 ## Technologies Used
 
-- **Frontend**: React.js, HTML, CSS, JavaScript
 - **Backend**: Spring Boot, Hibernate, MySQL
 - **Other Tools**: Node.js, Maven, npm
 
