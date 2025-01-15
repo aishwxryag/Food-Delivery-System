@@ -28,8 +28,32 @@ The **Food Delivery System** is designed to streamline the process of ordering f
 
 ## Features
 
-- **Restaurant Management**: Add/edit menus, process orders, and manage availability.
-- **Order Management**: Real-time order tracking for users and delivery personnel.
+- **Food Menu Management**:
+  - Add, retrieve, and view food items with details like name, description, price, and quantity.
+  - Check food item availability based on requested quantity.
+  
+- **Order Management**:
+  - Place orders after validating food item availability.
+  - Retrieve all orders and manage order statuses.
+
+- **Microservice Communication**:
+  - **Feign Client**: Orders Service communicates with Food Menu Service for real-time inventory checks.
+  - **Eureka Server**: Facilitates dynamic service discovery and scalability.
+
+- **Centralized Service Registry**:
+  - Monitor service health and availability using the Eureka Dashboard.
+
+- **Database Integration**:
+  - MySQL databases for separate services:
+    - `foodServiceDb` for food items.
+    - `orderServiceDb` for order data.
+
+- **Testing and Validation**:
+  - Test individual services and inter-service communication using Postman.
+  - Handle errors like insufficient food item quantity during order placement.
+
+- **Modular and Scalable**:
+  - Independent services allow easy scaling and future additions like a payment service.
 
 ---
 
