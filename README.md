@@ -13,7 +13,6 @@ A platform for users to order food and restaurants to manage orders.
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
