@@ -2,6 +2,8 @@
 
 A platform for users to order food and restaurants to manage orders.
 
+[Click here to watch the video]("D:\Downloads(D)\WhatsApp Video 2025-01-15 at 11.39.14 PM.mp4")
+
 ---
 
 ## Table of Contents
