@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/InventoryManagement-main/eureka/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/InventoryManagement-main/food-menu/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/InventoryManagement-main/orders/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/InventoryManagement-main/payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FoodDeliverySystem/eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FoodDeliverySystem/food-menu/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FoodDeliverySystem/orders/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FoodDeliverySystem/payment-service/src/main/java" charset="UTF-8" />
   </component>
 </project>
