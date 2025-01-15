@@ -2,7 +2,7 @@
 
 A platform for users to order food and restaurants to manage orders.
 
-[Click here to watch the video]("")
+[Click here to watch the video]("https://drive.google.com/file/d/1D1-OZ0YeW1pjVq4iuBX13ZiSLtpKy8GN/view?usp=drive_link")
 
 ---
 
@@ -12,7 +12,6 @@ A platform for users to order food and restaurants to manage orders.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [Acknowledgments](#acknowledgments)
 
 ---
