@@ -119,44 +119,13 @@ Use Postman or a similar tool to test the functionality of the system.
 ## Technologies Used
 
 - **Backend**: Spring Boot, Hibernate, MySQL
-- **Other Tools**: Node.js, Maven, npm
-
----
-
-## Contributing
-
-We welcome contributions to this project. Here’s how you can help:
-
-1. **Fork the Repository**:
-   - Click the "Fork" button at the top right of this repository.
-2. **Create a New Branch**:
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-3. **Make Changes**:
-   - Implement your feature or fix bugs.
-4. **Commit Changes**:
-   ```bash
-   git commit -m "Add feature: YourFeatureName"
-   ```
-5. **Push to GitHub**:
-   ```bash
-   git push origin feature/YourFeatureName
-   ```
-6. **Submit a Pull Request**:
-   - Open a pull request from your forked repository to this repository.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+- **Other Tools**: Node.js, Maven, npm, Spring Cloud Feign, Postman, IntelliJ IDEA
 
 ---
 
 ## Acknowledgments
 
 - Inspired by various online food delivery systems.
-- Special thanks to all contributors and open-source resources.
+- Special thanks to all open-source resources.
 
 ---
